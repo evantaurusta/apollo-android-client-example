@@ -10,7 +10,4 @@ class SampleQuery : Query {
     fun getName(name: String): String {
         return "hello my name is $name."
     }
-
-    fun testQuery() {
-    }
 }
