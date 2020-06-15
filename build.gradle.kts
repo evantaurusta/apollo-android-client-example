@@ -42,3 +42,9 @@ tasks.withType<KotlinCompile> {
 apollo {
 	generateKotlinModels.set(true) // or false for Java models
 }
+
+configurations.named("productionRuntimeClasspath").configure {
+	attributes {
+		attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage.JAVA_RUNTIME))
+	}
+}
